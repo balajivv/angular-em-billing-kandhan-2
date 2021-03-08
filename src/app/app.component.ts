@@ -39,7 +39,7 @@ export class AppComponent {
     };
 
     // console.log(this.billingDataFA);
-    console.log(this.questionsForm);
+    //console.log(this.questionsForm);
   }
 
   constructor(private builder: FormBuilder) {}
@@ -66,12 +66,12 @@ export class AppComponent {
         }
       ],
       response: this.getResponseArray(questionInfo.response),
-      responseSelected: [
+      responseSelected: 
         {
           value: questionInfo.responseSelected,
           disabled: true
         }
-      ]
+      
     });
   }
 
@@ -107,7 +107,7 @@ export class AppComponent {
   }
 
   controlAsFormControl(data: any): FormControl {
-    console.log(data);
+    // console.log(data);
     return data.controls as FormControl;
   }
 
@@ -137,6 +137,7 @@ export class AppComponent {
   }
 
   checkboxchange(question) {
+    console.log(question);
     if (question.controls.selected.value) {
       question.controls.minutes.enable();
       
@@ -146,6 +147,16 @@ export class AppComponent {
       question.controls.responseSelected.disable();
     }
 
-    console.log(question.controls.responseSelected);
+    // console.log(question.controls.responseSelected);
+  }
+
+
+  isDropdownDisabled(question) {
+       if (question.controls.selected.value) {
+         return false;
+       }
+       else {
+         return true;
+       }
   }
 }

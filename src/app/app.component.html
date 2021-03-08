@@ -22,7 +22,9 @@
 
   </select> -->
 
-  	<ng-multiselect-dropdown *ngIf="item.get('questionType').value =='MC'" [placeholder]="'custom placeholder'" [data]="getQuestionResponseJSON(item)" formControlName="responseSelected" [settings]="dropdownSettings"
+  	<ng-multiselect-dropdown id="SELECT{{i}}" *ngIf="item.get('questionType').value =='MC'" [placeholder]="'custom placeholder'" [data]="getQuestionResponseJSON(item)" formControlName="responseSelected" 
+  [disabled]="isDropdownDisabled(item)"
+    [settings]="dropdownSettings"
     
 	 >
 	</ng-multiselect-dropdown>
