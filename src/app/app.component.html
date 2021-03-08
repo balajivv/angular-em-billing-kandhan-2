@@ -1,0 +1,53 @@
+<form [formGroup]="questionsForm">
+
+	<span [hidden]="questionsForm.valid" >
+            Invalid Project ID.
+          </span>
+
+
+
+	<div class="row" formArrayName="billingData" *ngFor="let item of billingData.controls; let i = index;">
+		<div class="form-group" [formGroupName]="i">
+			<!-- <pre>{{ item.value | json }}</pre> -->
+			<input type="checkbox"
+      (change)=checkboxchange(item)
+     formControlName="selected"
+    /> {{item.get('questionId').value}}. {{item.get('questionLabel').value}}
+
+			<!-- <select *ngIf="item.get('questionType').value =='MC'" formControlName="responseSelected" >
+           <option *ngFor="let op of getQuestionResponseJSON(item)"
+    [value]=op.responseId>{{op.responseLabel}}</option>
+
+    
+
+  </select> -->
+
+  	<ng-multiselect-dropdown *ngIf="item.get('questionType').value =='MC'" [placeholder]="'custom placeholder'" [data]="getQuestionResponseJSON(item)" formControlName="responseSelected" [settings]="dropdownSettings"
+    
+	 >
+	</ng-multiselect-dropdown>
+
+
+			<!-- {{item.get('response').value | json}} -->
+			<input type="text"
+     formControlName="minutes"
+    />
+
+		</div>
+		</div>
+
+		<!-- 
+ -->
+		<br> <br>
+
+		<div class="row" formArrayName="billingData" *ngFor="let item of billingData.controls; let i = index;">
+
+			<span *ngIf="item.get('selected').value"> {{item.get('questionId').value}}. {{item.get('reportLabel').value}} 
+        <span *ngIf="item.get('questionType').value =='MC'"> 
+          {{getResponseLabel(item)}}
+        </span>
+        : {{item.get('minutes').value}}
+         </span>
+		</div>
+
+</form>

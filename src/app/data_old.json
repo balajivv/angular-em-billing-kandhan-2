@@ -1,0 +1,140 @@
+//https://beta5.objgen.com/json/local/design
+/**
+ * questions[0]
+  questionId = 1
+  questionLabel = Reviewing patient’s record prior to visit
+  questionType = SC
+  selected = false
+  action = A
+  minutes =
+  response[]
+
+questions[1]
+  questionId = 2
+  questionLabel = Performing a medically appropriate history and examination
+  questionType = SC
+  selected = false
+  action = A
+  minutes =
+  response[]
+
+questions[2]
+  questionId = 3
+  questionLabel = Ordering prescription medications, tests, or procedures
+  questionType = MC
+  selected = false
+  action = A
+  minutes =
+  response[0]
+    responseId = 1
+    responseLabel = Medications
+    selected = false
+  response[1]
+     responseId = 2
+     responseLabel = tests
+     selected = false
+  response[2]
+     responseId = 3
+     responseLabel = procedures
+     selected = false
+  response[3]
+     responseId = 4
+     responseLabel = all
+     selected = false
+
+questions[3]
+  questionId = 4
+  questionLabel = Independently interpreting results
+  questionType = SC
+  selected = false
+  action = A
+  minutes =
+  response[]
+
+questions[4]
+  questionId = 5
+  questionLabel = Communicating results to the patient/family/caregiver
+  questionType = MC
+  selected = false
+  action = A
+  minutes =
+  response[0]
+    responseId = 1
+    responseLabel = Option A
+    selected = false
+  response[1]
+     responseId = 2
+     responseLabel = Option B
+     selected = false
+  response[2]
+     responseId = 3
+     responseLabel = Option C
+     selected = false
+  response[3]
+     responseId = 4
+     responseLabel = all
+     selected = false
+
+questions[5]
+  questionId = 6
+  questionLabel = Obtaining/reviewing separately obtained history from someone other than patient
+  questionType = SC
+  selected = false
+  action = A
+  minutes =
+  response[]
+
+questions[6]
+  questionId = 7
+  questionLabel =  Counseling/educating the patient/family/caregiver
+  questionType = MC
+  selected = false
+  action = A
+  minutes =
+  response[0]
+    responseId = 1
+    responseLabel = Option A
+    selected = false
+  response[1]
+     responseId = 2
+     responseLabel = Option B
+     selected = false
+  response[2]
+     responseId = 3
+     responseLabel = Option C
+     selected = false
+  response[3]
+     responseId = 4
+     responseLabel = all
+     selected = false
+
+questions[7]
+  questionId = 8
+  questionLabel = Referring and communicating with another healthcare provider(s) 
+  questionType = SC
+  selected = false
+  action = A
+  minutes =
+  response[]
+
+questions[8]
+  questionId = 9
+  questionLabel = Documenting clinical information in the patient’s electronic health record 
+  questionType = SC
+  selected = false
+  action = A
+  minutes =
+  response[]
+
+questions[9]
+  questionId = 10
+  questionLabel = Coordination of care for the patient 
+  questionType = SC
+  selected = false
+  action = A
+  minutes =
+  response[]
+
+
+
+ */
