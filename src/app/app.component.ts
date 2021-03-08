@@ -139,10 +139,13 @@ export class AppComponent {
   checkboxchange(question) {
     if (question.controls.selected.value) {
       question.controls.minutes.enable();
+      
       question.controls.responseSelected.enable();
     } else {
       question.controls.minutes.disable();
       question.controls.responseSelected.disable();
     }
+
+    console.log(question.controls.responseSelected);
   }
 }
